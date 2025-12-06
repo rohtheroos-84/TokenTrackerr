@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TokenTrackerr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="contact.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span class="rocket-icon">🚀</span> <span class="token-text">Token</span><span class="tracker-text">Trackerr</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <button id="darkModeToggle">🌙</button>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-header">
+            <h1><i class="fas fa-headset"></i> Contact Us</h1>
+            <p>Have questions or need assistance? Our dedicated support team is here to help you 24/7. Choose your preferred way to reach us below.</p>
+        </section>
+
+        <div class="contact-grid">
+            <div class="contact-form-container">
+                <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="account">Account Issues</option>
+                            <option value="billing">Billing Questions</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Please describe your issue or question in detail" required></textarea>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for updates and market insights</label>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Support Hours</h3>
+                    <div class="support-hours">
+                        <div class="hours-row">
+                            <span>Monday - Friday:</span>
+                            <span>24/7</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Saturday - Sunday:</span>
+                            <span>24/7</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Holidays:</span>
+                            <span>24/7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-comments"></i> Quick Support</h3>
+                    <div class="support-channels">
+                        <div class="channel">
+                            <i class="fas fa-comment-dots"></i>
+                            <div class="channel-details">
+                                <span class="label">Live Chat</span>
+                                <a href="#" onclick="openLiveChat()">Start a conversation</a>
+                            </div>
+                        </div>
+                        <div class="channel">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="channel-details">
+                                <span class="label">Phone Support</span>
+                                <a href="tel:+91-800-123-4567">+91 800-123-4567</a>
+                            </div>
+                        </div>
+                        <div class="channel">
+                            <i class="fas fa-envelope"></i>
+                            <div class="channel-details">
+                                <span class="label">Email Support</span>
+                                <a href="mailto:support@tokentrackerr.com">support@tokentrackerr.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-book"></i> Resources</h3>
+                    <ul class="resource-links">
+                        <li><a href="/faq"><i class="fas fa-chevron-right"></i> Frequently Asked Questions</a></li>
+                        <li><a href="/docs"><i class="fas fa-chevron-right"></i> API Documentation</a></li>
+                        <li><a href="/guides"><i class="fas fa-chevron-right"></i> User Guides</a></li>
+                        <li><a href="/blog"><i class="fas fa-chevron-right"></i> Blog & Updates</a></li>
+                    </ul>
+                    <p class="social-text">Follow us on social media for quick updates and community support</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="office-location">
+            <h2><i class="fas fa-building"></i> Our Offices</h2>
+            <div class="offices-grid">
+                <div class="location-card">
+                    <div class="location-info">
+                        <h3>Mumbai Headquarters</h3>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt"></i> Level 8, Platina Building</p>
+                            <p>G Block BKC, Bandra Kurla Complex</p>
+                            <p>Mumbai, Maharashtra 400051</p>
+                            <p><i class="fas fa-phone"></i> +91 22-4000-8000</p>
+                        </address>
+                    </div>
+                    <div class="map-placeholder">
+                        <div class="mock-map" onclick="openGoogleMaps('Mumbai')">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>View on Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-info">
+                        <h3>Bangalore Tech Center</h3>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt"></i> Prestige Tech Park</p>
+                            <p>Outer Ring Road, Marathahalli</p>
+                            <p>Bangalore, Karnataka 560103</p>
+                            <p><i class="fas fa-phone"></i> +91 80-4123-9000</p>
+                        </address>
+                    </div>
+                    <div class="map-placeholder">
+                        <div class="mock-map" onclick="openGoogleMaps('Bangalore')">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>View on Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="market.html"><i class="fas fa-chart-line"></i> Market Analysis</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-wallet"></i> Portfolio Tracker</a></li>
+                    <li><a href="alerts.html"><i class="fas fa-bell"></i> Price Alerts</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Crypto News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="help.html"><i class="fas fa-life-ring"></i> Help Center</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                    <li><a href="api.html"><i class="fas fa-code"></i> API Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+                <a href="security.html">Security</a>
+                <a href="status.html">System Status</a>
+            </div>
+            <p>© 2024 TokenTrackerr. Done by Rohit N 23BAI1463</p>
+        </div>
+    </footer>
+
+    <script>
+        function openLiveChat() {
+            // Implement live chat functionality
+            alert('Live chat feature coming soon!');
+        }
+
+        function openGoogleMaps(location) {
+            const addresses = {
+                'Mumbai': 'Platina+Building+G+Block+BKC+Bandra+Kurla+Complex+Mumbai',
+                'Bangalore': 'Prestige+Tech+Park+Outer+Ring+Road+Marathahalli+Bangalore'
+            };
+            window.open(`https://www.google.com/maps/search/${addresses[location]}`, '_blank');
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Implement form submission logic
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

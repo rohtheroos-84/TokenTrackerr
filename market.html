@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market - TokenTrackerr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="shared.js"></script>
+    <script defer src="market.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span class="rocket-icon">🚀</span> <span class="token-text">Token</span><span class="tracker-text">Trackerr</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html" class="active">Market</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <button id="darkModeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Crypto Ticker -->
+    <div class="crypto-ticker">
+        <div class="ticker-container">
+            <!-- Original set -->
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC">
+                <span class="symbol">BTC</span>
+                <span class="price">₹51,23,470</span>
+                <span class="change up">+2.4%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+                <span class="symbol">ETH</span>
+                <span class="price">₹2,85,630</span>
+                <span class="change up">+1.8%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="BNB">
+                <span class="symbol">BNB</span>
+                <span class="price">₹38,450</span>
+                <span class="change down">-0.5%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" alt="ADA">
+                <span class="symbol">ADA</span>
+                <span class="price">₹58.25</span>
+                <span class="change up">+3.2%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="SOL">
+                <span class="symbol">SOL</span>
+                <span class="price">₹10,580</span>
+                <span class="change up">+4.7%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/polkadot-new-dot-logo.png" alt="DOT">
+                <span class="symbol">DOT</span>
+                <span class="price">₹850.30</span>
+                <span class="change down">-1.2%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" alt="AVAX">
+                <span class="symbol">AVAX</span>
+                <span class="price">₹3,450</span>
+                <span class="change up">+2.8%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/chainlink-link-logo.png" alt="LINK">
+                <span class="symbol">LINK</span>
+                <span class="price">₹1,850</span>
+                <span class="change up">+1.5%</span>
+            </div>
+        </div>
+        <div class="ticker-container">
+            <!-- Duplicate set -->
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC">
+                <span class="symbol">BTC</span>
+                <span class="price">₹51,23,470</span>
+                <span class="change up">+2.4%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+                <span class="symbol">ETH</span>
+                <span class="price">₹2,85,630</span>
+                <span class="change up">+1.8%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="BNB">
+                <span class="symbol">BNB</span>
+                <span class="price">₹38,450</span>
+                <span class="change down">-0.5%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" alt="ADA">
+                <span class="symbol">ADA</span>
+                <span class="price">₹58.25</span>
+                <span class="change up">+3.2%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="SOL">
+                <span class="symbol">SOL</span>
+                <span class="price">₹10,580</span>
+                <span class="change up">+4.7%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/polkadot-new-dot-logo.png" alt="DOT">
+                <span class="symbol">DOT</span>
+                <span class="price">₹850.30</span>
+                <span class="change down">-1.2%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" alt="AVAX">
+                <span class="symbol">AVAX</span>
+                <span class="price">₹3,450</span>
+                <span class="change up">+2.8%</span>
+            </div>
+            <div class="ticker-item">
+                <img src="https://cryptologos.cc/logos/chainlink-link-logo.png" alt="LINK">
+                <span class="symbol">LINK</span>
+                <span class="price">₹1,850</span>
+                <span class="change up">+1.5%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Market Overview -->
+            <div class="market-overview">
+                <div class="overview-card">
+                    <h3>Market Cap</h3>
+                    <p id="totalMarketCap">$2.89T</p>
+                    <span class="change up">+2.4%</span>
+                </div>
+                <div class="overview-card">
+                    <h3>24h Volume</h3>
+                    <p id="totalVolume">$127.8B</p>
+                    <span class="change down">-1.2%</span>
+                </div>
+                <div class="overview-card">
+                    <h3>BTC Dominance</h3>
+                    <p id="btcDominance">48.2%</p>
+                    <span class="change up">+0.3%</span>
+                </div>
+                <div class="overview-card">
+                    <h3>Market Sentiment</h3>
+                    <div id="sentimentMeter" class="sentiment-meter">
+                        <div class="meter-fill" style="width: 65%;"></div>
+                    </div>
+                    <p>Bullish</p>
+                </div>
+            </div>
+
+            <!-- Market Trends Section -->
+            <div class="market-trends">
+                <div class="chart-container">
+                    <h2>Market Trends</h2>
+                    <div class="chart-controls">
+                        <select id="chartTimeframe">
+                            <option value="1d">24h</option>
+                            <option value="7d">7 Days</option>
+                            <option value="30d">30 Days</option>
+                            <option value="1y">1 Year</option>
+                        </select>
+                        <select id="chartType">
+                            <option value="price">Price</option>
+                            <option value="volume">Volume</option>
+                            <option value="marketCap">Market Cap</option>
+                        </select>
+                    </div>
+                    <canvas id="marketChart"></canvas>
+                </div>
+            </div>
+            <p> </p>
+            <p> </p>
+
+            <!-- Cryptocurrency Table -->
+            <div class="crypto-table-container">
+                
+                <div class="table-header">
+                    <h2>Top Cryptocurrencies</h2>
+                    <div class="table-controls">
+                        <select id="timeframeSelect">
+                            <option value="24h">24h</option>
+                            <option value="7d">7d</option>
+                            <option value="30d">30d</option>
+                        </select>
+                        <input type="text" id="searchBar" placeholder="Search for a coin...">
+                        <button id="createAlertBtn">+ Create Alert</button>
+                    </div>
+                </div>
+                <table class="crypto-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Coin</th>
+                            <th>Price</th>
+                            <th>24h Change</th>
+                            <th>Market Cap</th>
+                            <th>Volume (24h)</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cryptoTableBody">
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="table-pagination">
+                    <button id="prevPage">Previous</button>
+                    <span id="pageInfo">Page 1 of 5</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Price Alert Modal -->
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <h2>Set Price Alert</h2>
+            <form id="alertForm">
+                <select id="coinSelect" required>
+                    <option value="">Select Coin</option>
+                    <option value="BTC">Bitcoin</option>
+                    <option value="ETH">Ethereum</option>
+                    <!-- More options -->
+                </select>
+                <input type="number" id="priceTarget" placeholder="Price Target" required>
+                <select id="condition" required>
+                    <option value="above">Price Above</option>
+                    <option value="below">Price Below</option>
+                </select>
+                <button type="submit">Set Alert</button>
+                <button type="button" class="close-modal">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="market.html"><i class="fas fa-chart-line"></i> Market Analysis</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-wallet"></i> Portfolio Tracker</a></li>
+                    <li><a href="alerts.html"><i class="fas fa-bell"></i> Price Alerts</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Crypto News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="help.html"><i class="fas fa-life-ring"></i> Help Center</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                    <li><a href="api.html"><i class="fas fa-code"></i> API Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+                <a href="security.html">Security</a>
+                <a href="status.html">System Status</a>
+            </div>
+            <p>© 2024 TokenTrackerr. Done by Rohit N 23BAI1463</p>
+        </div>
+    </footer>
+</body>
+</html> 

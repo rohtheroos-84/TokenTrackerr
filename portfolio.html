@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - TokenTrackerr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="shared.js"></script>
+    <script defer src="portfolio.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span class="rocket-icon">🚀</span> <span class="token-text">Token</span><span class="tracker-text">Trackerr</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <button id="darkModeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Portfolio Dashboard -->
+    <div class="portfolio-dashboard">
+        <!-- Portfolio Summary -->
+        <div class="portfolio-summary">
+            <h2>Portfolio Summary</h2>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Balance</h3>
+                    <p id="totalBalance">$0.00</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Profit/Loss</h3>
+                    <p id="totalPnL">$0.00</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Number of Assets</h3>
+                    <p id="assetCount">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asset Distribution -->
+        <div class="asset-distribution">
+            <h2>Asset Distribution</h2>
+            <div class="distribution-list" id="assetDistribution">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Holdings Table -->
+        <div class="holdings-section">
+            <div class="section-header">
+                <h2>Your Holdings</h2>
+                <div class="controls">
+                    <input type="text" id="holdingsSearch" placeholder="Search assets...">
+                    <button id="addHoldingBtn" class="primary-btn">+ Add Asset</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="holdings-table">
+                    <thead>
+                        <tr>
+                            <th>Asset</th>
+                            <th>Amount</th>
+                            <th>Average Buy Price</th>
+                            <th>Current Price</th>
+                            <th>Current Value</th>
+                            <th>Profit/Loss</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="holdingsTableBody">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Transaction History -->
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <div class="transaction-filters">
+                <select id="timeFilter">
+                    <option value="all">All Time</option>
+                    <option value="week">Past Week</option>
+                    <option value="month">Past Month</option>
+                    <option value="year">Past Year</option>
+                </select>
+                <select id="typeFilter">
+                    <option value="all">All Types</option>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
+                </select>
+            </div>
+            <div class="transaction-list" id="transactionList">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Asset Modal -->
+    <div id="addAssetModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Asset</h2>
+                <button class="close-modal">×</button>
+            </div>
+            <form id="addAssetForm">
+                <div class="form-group">
+                    <label for="assetSelect">Select Asset</label>
+                    <select id="assetSelect" required>
+                        <option value="">Choose an asset...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="assetAmount">Amount</label>
+                    <input type="number" id="assetAmount" step="any" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="purchasePrice">Purchase Price (USD)</label>
+                    <input type="number" id="purchasePrice" step="any" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="purchaseDate">Purchase Date</label>
+                    <input type="datetime-local" id="purchaseDate" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">Add Asset</button>
+                    <button type="button" class="secondary-btn" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="market.html"><i class="fas fa-chart-line"></i> Market Analysis</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-wallet"></i> Portfolio Tracker</a></li>
+                    <li><a href="alerts.html"><i class="fas fa-bell"></i> Price Alerts</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Crypto News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="help.html"><i class="fas fa-life-ring"></i> Help Center</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                    <li><a href="api.html"><i class="fas fa-code"></i> API Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+                <a href="security.html">Security</a>
+                <a href="status.html">System Status</a>
+            </div>
+            <p>© 2024 TokenTrackerr. Done by Rohit N 23BAI1463</p>
+        </div>
+    </footer>
+</body>
+</html>

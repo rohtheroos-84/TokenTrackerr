@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokenTrackerr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="shared.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="trending.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><span class="rocket-icon">🚀</span> <span class="token-text">Token</span><span class="tracker-text">Trackerr</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="market.html">Market</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="user-controls">
+      <button id="darkModeToggle">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Welcome message -->
+      <div class="welcome-section">
+        <h1>Welcome to TokenTrackerr</h1>
+        <p>Your all-in-one platform for tracking cryptocurrencies and managing your portfolio</p>
+        <div class="welcome-buttons">
+          <a href="portfolio.html" class="btn primary-btn">View Portfolio</a>
+          <a href="market.html" class="btn secondary-btn">Explore Market</a>
+        </div>
+      </div>
+      
+      <!-- Features section -->
+      <div class="features-section">
+        <h2>Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Real-Time Tracking</h3>
+            <p>Track cryptocurrency prices in real-time with accurate market data</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Portfolio Management</h3>
+            <p>Manage your crypto portfolio and track your investments easily</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-bell"></i>
+            <h3>Price Alerts</h3>
+            <p>Set price alerts and get notified when cryptocurrencies reach your target</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-newspaper"></i>
+            <h3>News Updates</h3>
+            <p>Stay updated with the latest news and trends in the crypto world</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Market Statistics Section -->
+      <div class="market-stats-section">
+        <h2>Market Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-globe"></i>
+            <h3>Global Market Cap</h3>
+            <p id="globalMarketCap">$2.89T</p>
+            <span class="change up">+2.4%</span>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-chart-bar"></i>
+            <h3>24h Volume</h3>
+            <p id="globalVolume">$127.8B</p>
+            <span class="change down">-1.2%</span>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-coins"></i>
+            <h3>Active Cryptocurrencies</h3>
+            <p>2,500+</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Total Exchanges</h3>
+            <p>500+</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market Highlights Section -->
+      <div class="market-highlights">
+        <h2>Market Highlights</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin" class="crypto-icon">
+              <div class="crypto-info">
+                <h3>Bitcoin (BTC)</h3>
+                <span class="rank">#1</span>
+              </div>
+            </div>
+            <div class="highlight-content">
+              <div class="price-info">
+                <p class="price">₹5,890,000</p>
+                <span class="change up">+5.2%</span>
+              </div>
+              <div class="market-stats">
+                <div class="stat">
+                  <span class="label">Market Cap</span>
+                  <span class="value">₹1.2T</span>
+                </div>
+                <div class="stat">
+                  <span class="label">24h Volume</span>
+                  <span class="value">₹48.2B</span>
+                </div>
+              </div>
+              <p class="description">Bitcoin continues to show strong momentum with increasing institutional adoption and growing retail interest in India.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum" class="crypto-icon">
+              <div class="crypto-info">
+                <h3>Ethereum (ETH)</h3>
+                <span class="rank">#2</span>
+              </div>
+            </div>
+            <div class="highlight-content">
+              <div class="price-info">
+                <p class="price">₹285,000</p>
+                <span class="change up">+3.8%</span>
+              </div>
+              <div class="market-stats">
+                <div class="stat">
+                  <span class="label">Market Cap</span>
+                  <span class="value">₹380B</span>
+                </div>
+                <div class="stat">
+                  <span class="label">24h Volume</span>
+                  <span class="value">₹18.5B</span>
+                </div>
+              </div>
+              <p class="description">Ethereum's DeFi ecosystem continues to expand, with growing adoption of Layer 2 solutions and increasing NFT market activity.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana" class="crypto-icon">
+              <div class="crypto-info">
+                <h3>Solana (SOL)</h3>
+                <span class="rank">#5</span>
+              </div>
+            </div>
+            <div class="highlight-content">
+              <div class="price-info">
+                <p class="price">₹10,500</p>
+                <span class="change down">-2.1%</span>
+              </div>
+              <div class="market-stats">
+                <div class="stat">
+                  <span class="label">Market Cap</span>
+                  <span class="value">₹45B</span>
+                </div>
+                <div class="stat">
+                  <span class="label">24h Volume</span>
+                  <span class="value">₹2.8B</span>
+                </div>
+              </div>
+              <p class="description">Solana's high-performance blockchain is gaining traction in India with increasing DApp development and DeFi adoption.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Trending Cryptocurrencies section -->
+      <div id="trending-section" class="trending-section">
+        <!-- This section will be populated by trending.js -->
+      </div>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <div class="step-number">1</div>
+            <h3>Create Your Account</h3>
+            <p>Sign up for free and connect your preferred Indian crypto exchanges</p>
+            <ul class="step-features">
+              <li><i class="fas fa-check"></i> Secure authentication</li>
+              <li><i class="fas fa-check"></i> Exchange integration</li>
+              <li><i class="fas fa-check"></i> Portfolio setup</li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="step-number">2</div>
+            <h3>Track & Analyze</h3>
+            <p>Monitor your portfolio with advanced analytics and insights</p>
+            <ul class="step-features">
+              <li><i class="fas fa-check"></i> Real-time tracking</li>
+              <li><i class="fas fa-check"></i> Performance analytics</li>
+              <li><i class="fas fa-check"></i> Tax calculations</li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="step-number">3</div>
+            <h3>Stay Informed</h3>
+            <p>Get personalized alerts and market updates</p>
+            <ul class="step-features">
+              <li><i class="fas fa-check"></i> Price alerts</li>
+              <li><i class="fas fa-check"></i> News updates</li>
+              <li><i class="fas fa-check"></i> Market insights</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <div class="testimonials-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"TokenTrackerr has been a game-changer for my crypto investments. The real-time tracking</p>
+                <p>and portfolio management features are exactly what I needed as a retail investor in India.</p> 
+                <p>The platform's intuitive interface makes it easy to monitor my investments and make informed</p>
+                <p>decisions."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=4" alt="Rajesh Kumar" class="author-avatar">
+                <div class="author-info">
+                  <h4>Rajesh Kumar</h4>
+                  <p>IT Professional, Bangalore</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"As a day trader in Mumbai, I rely heavily on accurate market data.</p>
+                <p>TokenTrackerr's real-time updates and analysis tools have significantly</p>
+                <p>improved my trading decisions. The platform's integration with Indian</p>
+                <p>exchanges is particularly helpful for my trading strategy."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Priya Sharma" class="author-avatar">
+                <div class="author-info">
+                  <h4>Priya Sharma</h4>
+                  <p>Day Trader, Mumbai</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"The portfolio tracking and tax calculation features are particularly</p>
+                <p>useful for Indian crypto investors. It helps me stay compliant with</p>
+                <p>regulations while managing my investments. The detailed analytics have</p>
+                <p>helped me optimize my portfolio performance."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=6" alt="Amit Patel" class="author-avatar">
+                <div class="author-info">
+                  <h4>Amit Patel</h4>
+                  <p>Business Owner, Delhi</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"I started my crypto journey with TokenTrackerr, and it's been an</p>
+                <p>excellent platform for learning and tracking. The educational resources</p>
+                <p>and market insights are invaluable. The community features have helped</p>
+                <p>me connect with other Indian crypto enthusiasts."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=7" alt="Neha Reddy" class="author-avatar">
+                <div class="author-info">
+                  <h4>Neha Reddy</h4>
+                  <p>Software Engineer, Hyderabad</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"The integration with Indian exchanges and support for INR pairs makes</p>
+                <p>it the perfect platform for Indian crypto enthusiasts. The real-time price</p>
+                <p>alerts and portfolio tracking features have helped me make better</p>
+                <p>investment decisions."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=8" alt="Arun Verma" class="author-avatar">
+                <div class="author-info">
+                  <h4>Arun Verma</h4>
+                  <p>Financial Analyst, Chennai</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"TokenTrackerr's mobile app is fantastic for tracking my portfolio on</p>
+                <p>the go. The instant notifications for price movements have saved me from</p>
+                <p>potential losses. The platform's user-friendly interface makes it easy to</p>
+                <p>manage my investments from anywhere."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=9" alt="Meera Iyer" class="author-avatar">
+                <div class="author-info">
+                  <h4>Meera Iyer</h4>
+                  <p>Investment Advisor, Pune</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+          <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Features</h3>
+        <ul>
+          <li><a href="market.html"><i class="fas fa-chart-line"></i> Market Analysis</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-wallet"></i> Portfolio Tracker</a></li>
+          <li><a href="alerts.html"><i class="fas fa-bell"></i> Price Alerts</a></li>
+          <li><a href="news.html"><i class="fas fa-newspaper"></i> Crypto News</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+        </div>
+        <div class="footer-newsletter">
+          <p>Subscribe to our newsletter for updates</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="help.html"><i class="fas fa-life-ring"></i> Help Center</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+          <li><a href="api.html"><i class="fas fa-code"></i> API Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="careers.html">Careers</a>
+        <a href="press.html">Press</a>
+        <a href="security.html">Security</a>
+        <a href="status.html">System Status</a>
+      </div>
+      <p>© 2024 TokenTrackerr. Done by Rohit N 23BAI1463</p>
+    </div>
+  </footer>
+</body>
+</html>

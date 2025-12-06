@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - TokenTrackerr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="news.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span class="rocket-icon">🚀</span> <span class="token-text">Token</span><span class="tracker-text">Trackerr</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <button id="darkModeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- News Container -->
+    <div class="news-container">
+        <!-- News Filters -->
+        <div class="news-filters">
+            <div class="filter-group">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="market">Market Analysis</option>
+                    <option value="technology">Technology</option>
+                    <option value="regulation">Regulation</option>
+                    <option value="adoption">Adoption</option>
+                    <option value="defi">DeFi</option>
+                    <option value="nft">NFTs</option>
+                    <option value="mining">Mining</option>
+                </select>
+                <select id="timeFilter">
+                    <option value="24h">Last 24 Hours</option>
+                    <option value="7d">Last 7 Days</option>
+                    <option value="30d">Last 30 Days</option>
+                    <option value="all">All Time</option>
+                </select>
+                <input type="text" id="newsSearch" placeholder="Search news...">
+                <button id="filterBtn" class="primary-btn"><i class="fas fa-filter"></i> Apply Filters</button>
+            </div>
+            <div class="active-filters" id="activeFilters">
+                <!-- Active filters will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Breaking News Ticker -->
+        <div class="breaking-news">
+            <span class="breaking-label">BREAKING</span>
+            <div class="ticker-wrapper">
+                <div class="ticker-content">
+                    <span>Bitcoin surpasses $97,000 as institutional adoption grows • </span>
+                    <span>SEC approves multiple spot Bitcoin ETF applications • </span>
+                    <span>Ethereum Layer 2 solutions reach new TVL milestone • </span>
+                    <span>Major bank announces crypto custody service launch • </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured News -->
+        <div class="featured-news">
+            <h2><i class="fas fa-star"></i> Featured Stories</h2>
+            <div class="featured-grid">
+                <article class="featured-card main-feature">
+                    <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d" alt="Bitcoin">
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="category market">Market Analysis</span>
+                            <span class="trending"><i class="fas fa-fire"></i> Trending</span>
+                        </div>
+                        <h3>Bitcoin Hits New All-Time High Above $97,000</h3>
+                        <p>The leading cryptocurrency continues its bullish momentum as institutional adoption grows. Analysts predict further upside as market sentiment remains strong...</p>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <span class="timestamp"><i class="far fa-clock"></i> 2 hours ago</span>
+                                <span class="author"><i class="far fa-user"></i> Sarah Chen</span>
+                            </div>
+                            <button class="read-more">Read More <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0" alt="Ethereum">
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="category technology">Technology</span>
+                        </div>
+                        <h3>Ethereum Layer 2 Solutions See Record Growth</h3>
+                        <p>Scaling solutions on Ethereum network reach new milestones in adoption and TVL as gas fees remain optimized...</p>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <span class="timestamp"><i class="far fa-clock"></i> 4 hours ago</span>
+                                <span class="author"><i class="far fa-user"></i> Alex Rivera</span>
+                            </div>
+                            <button class="read-more">Read More <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- News Categories -->
+        <div class="news-categories">
+            <h2><i class="fas fa-th-large"></i> News Categories</h2>
+            <div class="category-grid">
+                <a href="#market" class="category-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Market Analysis</h3>
+                    <span class="article-count">24 articles</span>
+                </a>
+                <a href="#technology" class="category-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Technology</h3>
+                    <span class="article-count">18 articles</span>
+                </a>
+                <a href="#defi" class="category-card">
+                    <i class="fas fa-university"></i>
+                    <h3>DeFi</h3>
+                    <span class="article-count">15 articles</span>
+                </a>
+                <a href="#regulation" class="category-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Regulation</h3>
+                    <span class="article-count">12 articles</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Latest News -->
+        <div class="latest-news">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th-large"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <!-- News items will be dynamically populated by JavaScript -->
+            </div>
+            <div class="load-more">
+                <button id="loadMoreBtn" class="primary-btn">Load More <i class="fas fa-sync"></i></button>
+            </div>
+        </div>
+
+        <!-- Trending Topics -->
+        <div class="trending-topics">
+            <h2><i class="fas fa-fire"></i> Trending Topics</h2>
+            <div class="topics-cloud">
+                <a href="#" class="topic-tag" data-weight="10">#Bitcoin</a>
+                <a href="#" class="topic-tag" data-weight="8">#ETF</a>
+                <a href="#" class="topic-tag" data-weight="7">#Ethereum</a>
+                <a href="#" class="topic-tag" data-weight="6">#DeFi</a>
+                <a href="#" class="topic-tag" data-weight="5">#Regulation</a>
+                <a href="#" class="topic-tag" data-weight="4">#NFTs</a>
+                <a href="#" class="topic-tag" data-weight="4">#Layer2</a>
+                <a href="#" class="topic-tag" data-weight="3">#Mining</a>
+            </div>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <h2><i class="fas fa-envelope"></i> Stay Updated</h2>
+                <p>Subscribe to our newsletter for daily crypto news and analysis</p>
+                <ul class="newsletter-features">
+                    <li><i class="fas fa-check"></i> Daily market updates</li>
+                    <li><i class="fas fa-check"></i> Breaking news alerts</li>
+                    <li><i class="fas fa-check"></i> Weekly market analysis</li>
+                    <li><i class="fas fa-check"></i> Expert insights</li>
+                </ul>
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="primary-btn">Subscribe <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        I agree to receive news and updates
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="market.html"><i class="fas fa-chart-line"></i> Market Analysis</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-wallet"></i> Portfolio Tracker</a></li>
+                    <li><a href="alerts.html"><i class="fas fa-bell"></i> Price Alerts</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Crypto News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="help.html"><i class="fas fa-life-ring"></i> Help Center</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                    <li><a href="api.html"><i class="fas fa-code"></i> API Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+                <a href="security.html">Security</a>
+                <a href="status.html">System Status</a>
+            </div>
+            <p>© 2024 TokenTrackerr. Done by Rohit N 23BAI1463</p>
+        </div>
+    </footer>
+</body>
+</html> 
