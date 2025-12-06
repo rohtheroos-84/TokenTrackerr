@@ -1,4 +1,4 @@
-# 🚀 TokenTrackerr
+# TokenTrackerr
 
 A cryptocurrency tracking and portfolio management web application designed for demonstration and learning purposes.
 
@@ -25,7 +25,7 @@ A cryptocurrency tracking and portfolio management web application designed for 
 
 ---
 
-## 📋 About the Project
+## About the Project
 
 TokenTrackerr is a front-end web development project created to demonstrate modern web design principles, responsive layouts, and interactive user interfaces. It mimics the functionality of a cryptocurrency tracking platform but uses only static data.
 
@@ -37,9 +37,9 @@ TokenTrackerr is a front-end web development project created to demonstrate mode
 
 ---
 
-## ✨ Features
+## Features
 
-### 🏠 Home Page
+### Home Page
 - Welcome section with call-to-action buttons
 - Feature showcase cards
 - Market statistics overview (static data)
@@ -48,28 +48,28 @@ TokenTrackerr is a front-end web development project created to demonstrate mode
 - Step-by-step "How It Works" guide
 - User testimonials (fictional)
 
-### 📊 Market Page
+### Market Page
 - Animated cryptocurrency ticker
 - Market overview statistics
 - Cryptocurrency table with search functionality
 - Price charts and visualizations
 - Filter and sort capabilities
 
-### 💼 Portfolio Page
+### Portfolio Page
 - Portfolio summary dashboard
 - Asset distribution visualization
 - Holdings table
 - Transaction history
 - Add/edit holdings functionality (local storage only)
 
-### 📰 News Page
+### News Page
 - Breaking news ticker
 - Featured news articles
 - Category filtering
 - Trending stories section
 - Search functionality
 
-### 📞 Contact Page
+### Contact Page
 - Contact form
 - Support information
 - FAQ section
@@ -77,7 +77,7 @@ TokenTrackerr is a front-end web development project created to demonstrate mode
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** - Semantic markup and structure
 - **CSS3** - Styling, animations, and responsive design
@@ -95,7 +95,7 @@ TokenTrackerr is a front-end web development project created to demonstrate mode
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 webdev_proj/
@@ -121,7 +121,7 @@ webdev_proj/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
@@ -156,7 +156,7 @@ webdev_proj/
 
 ---
 
-## 🎨 Features Breakdown
+## Features Breakdown
 
 ### Dark Mode
 - Toggle between light and dark themes
@@ -185,13 +185,7 @@ webdev_proj/
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots of your application here)*
-
----
-
-## 🎓 Learning Objectives
+## Learning Objectives
 
 This project demonstrates proficiency in:
 
@@ -221,7 +215,7 @@ This project demonstrates proficiency in:
 
 ---
 
-## 🔮 Future Enhancements (If Expanded)
+## Future Enhancements (welcome to contribute)
 
 - [ ] Integration with real cryptocurrency APIs
 - [ ] User authentication system
@@ -234,7 +228,7 @@ This project demonstrates proficiency in:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal educational project, but suggestions and feedback are welcome!
 
@@ -246,22 +240,21 @@ This is a personal educational project, but suggestions and feedback are welcome
 
 ---
 
-## 📝 License
+## License
 
 This project is for educational purposes. Feel free to use it as a learning resource or template for your own projects.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Rohit N**  
-Registration: 23BAI1463
 
 - GitHub: [@rohtheroos-84](https://github.com/rohtheroos-84)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Cryptocurrency logos from [CryptoLogos](https://cryptologos.cc/)
 - Avatar images from [Pravatar](https://pravatar.cc/)
@@ -272,7 +265,7 @@ Registration: 23BAI1463
 
 ---
 
-## 📞 Contact
+## Contact
 
 For questions or feedback about this project:
 - Open an issue on GitHub
@@ -280,7 +273,7 @@ For questions or feedback about this project:
 
 ---
 
-## ⚖️ Legal Notice
+## Legal Notice
 
 This project is purely for educational and demonstration purposes. It does not:
 - Provide financial advice

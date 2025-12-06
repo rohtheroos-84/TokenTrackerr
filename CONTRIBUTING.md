@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to TokenTrackerr! This is an educational web development project, and we welcome contributions that help improve the code quality, design, or learning value.
 
-## 🎯 Project Goals
+## Project Goals
 
 This project aims to:
 - Demonstrate modern web development techniques
@@ -10,7 +10,7 @@ This project aims to:
 - Showcase responsive design and UI/UX principles
 - Serve as a portfolio piece
 
-## 📝 Types of Contributions Welcome
+## Types of Contributions Welcome
 
 ### Code Improvements
 - Bug fixes
@@ -37,7 +37,7 @@ This project aims to:
 - Chart/visualization improvements
 - Additional demonstration pages
 
-## 🚀 How to Contribute
+## How to Contribute
 
 ### 1. Fork the Repository
 Click the "Fork" button at the top right of the repository page.
@@ -103,7 +103,7 @@ git push origin feature/your-feature-name
    - Testing performed
    - Any breaking changes
 
-## 💻 Code Style Guidelines
+## Code Style Guidelines
 
 ### HTML
 - Use semantic HTML5 elements
@@ -125,7 +125,7 @@ git push origin feature/your-feature-name
 - Keep functions small and focused
 - Avoid global variables
 
-## 🐛 Reporting Bugs
+## Reporting Bugs
 
 When reporting bugs, please include:
 - Browser and version
@@ -135,7 +135,7 @@ When reporting bugs, please include:
 - Actual behavior
 - Screenshots if applicable
 
-## 💡 Suggesting Features
+## Suggesting Features
 
 For feature suggestions:
 - Explain the use case
@@ -143,7 +143,7 @@ For feature suggestions:
 - Consider educational value
 - Keep scope appropriate for a static demo
 
-## ⚠️ Important Notes
+## Important Notes
 
 ### What NOT to Contribute
 - Real API integrations (this is a static demo)
@@ -158,7 +158,7 @@ For feature suggestions:
 - Maintain the **disclaimer notices**
 - Focus on **learning and demonstration**
 
-## 📜 Code of Conduct
+## Code of Conduct
 
 ### Our Standards
 - Be respectful and inclusive
@@ -172,18 +172,18 @@ For feature suggestions:
 - Personal or political attacks
 - Publishing others' private information
 
-## 📞 Questions?
+## Questions?
 
 If you have questions about contributing:
 - Open an issue with the "question" label
 - Check existing issues and discussions
 - Review the README for project context
 
-## 🙏 Recognition
+## Recognition
 
 Contributors will be acknowledged in:
 - The project README
 - Release notes for significant contributions
 - The project's contributor page
 
-Thank you for helping make TokenTrackerr a better learning resource! 🚀
+Thank you for helping make TokenTrackerr a better learning resource!
